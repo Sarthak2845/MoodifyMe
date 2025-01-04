@@ -39,7 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
   
       progressValue.style.width = `${(completedGoals / totalGoals) * 100 || 0}%`;
       progressValue.innerText = `${completedGoals}/${totalGoals} Completed`;
-      progressLabel.innerText = quote[Math.min(completedGoals, quote.length - 1)];
+      if (totalGoals === 0) {
+        console.error("Total goals cannot be zero");
+      } else {
+        const progressPercentage = Math.trunc(((completedGoals / totalGoals) * 100));
+        let quoteIndex;
+        if (progressPercentage === 100) {
+          quoteIndex = 3; // All goals completed
+        } else if (progressPercentage >= 75) {
+          quoteIndex = 2; // Almost done
+        } else if (progressPercentage >= 50) {
+          quoteIndex = 1; // Halfway done
+        } else {
+          quoteIndex = 0; // Just starting out
+        }
+        progressLabel.innerText = quote[quoteIndex];
+      }      
     }
   
    
@@ -101,6 +116,12 @@ document.addEventListener("DOMContentLoaded", () => {
         checkbox.addEventListener("click", () => {
           const index = checkbox.dataset.index;
           const input = inputs[index]; 
+          if (input.value.trim() === "") {
+            errorLabel.innerText = "Goal cannot be empty!";
+            errorLabel.style.display = "block";
+            return;
+            
+          }
   
         
           allGoals[index].completed = !allGoals[index].completed;
