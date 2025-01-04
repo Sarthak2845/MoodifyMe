@@ -19,14 +19,13 @@
 
     <header>
         <nav id="navbar"
-            class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg fixed top-0 left-0 w-full z-50 transition-all duration-300">
+            class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
             <h3 id="logo" class="text-2xl font-extrabold text-white">MoodifyMe</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="#" class="hover:text-yellow-400 transition duration-300">Home</a>
-                <a href="#" class="hover:text-yellow-400 transition duration-300">Set Timer</a>
-                <a href="#" class="hover:text-yellow-400 transition duration-300">Get Jokes</a>
-                <a href="./Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
-                <a href="./Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">Create An Task</a>
+                <a href="#" class="hover:text-yellow-400 transition duration-300">To Do</a>
+                <a href="#" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
+                <a href="#" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
             </div>
             <!-- Mobile Navigation Toggle -->
             <div class="sm:hidden flex items-center">
@@ -47,7 +46,40 @@
             <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
         </div>
     </header>
-
+    <main class="mt-24 px-4">  
+            
+            <div class=" input-deadline flex justify-center items-center flex-col ">
+                <h2 class="text-3xl font-bold mb-4">Set Your <span class="text-blue-700">Hackathon</span>  Deadline</h2>
+                <input type="datetime-local" class="deadline bg-black p-4 rounded-xl text-white" id="deadline" required>
+                <button class="btn m-4 bg-black p-4 rounded-2xl">Start Countdown</button>
+            </div>
+            <div class="timer-container flex justify-center items-center flex-row ">
+                <div class="flex justify-center items-center flex-col bg-black p-3 rounded-xl m-4">
+                    <div class="day text-3xl">00</div>
+                    <p>Days</p>
+                </div>
+            <div class="timer-container flex justify-center items-center flex-row ">
+                <div class="flex justify-center items-center flex-col bg-black p-3 rounded-xl m-4">
+                    <div class="hour text-3xl">00</div>
+                    <p>Hr</p>
+                </div>
+            <div class="timer-container flex justify-center items-center flex-row ">
+                <div class="flex justify-center items-center flex-col bg-black p-3 rounded-xl m-4">
+                    <div class="min text-3xl">00</div>
+                    <p>Min</p>
+                </div>
+            <div class="timer-container flex justify-center items-center flex-row ">
+                <div class="flex justify-center items-center flex-col bg-black p-3 rounded-xl m-4">
+                    <div class="sec text-3xl">00</div>
+                    <p>Sec</p>
+                </div>
+               
+            </div>
+           
+      
+       
+    </main>
+    
     <script>
         const navToggle = document.getElementById("nav-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
