@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Vanta.js Background
     VANTA.FOG({
         el: "#vanta-bg",
         mouseControls: true,
@@ -11,55 +12,94 @@ document.addEventListener('DOMContentLoaded', function () {
         lowlightColor: 0x2900ff,
         baseColor: 0x000000,
     });
+
+    // Initialize Flatpickr
+    flatpickr("#deadline", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        theme: "dark"
+    });
 });
 
-const day = document.querySelector('.day');
-const hour = document.querySelector('.hour');
-const min = document.querySelector('.min');
-const sec = document.querySelector('.sec');
-const deadline = document.querySelector('.deadline');
-const btn = document.querySelector('.btn');
+const jsConfetti = new JSConfetti(); // Initialize js-confetti
 
-let timerInterval; 
+const startBtn = document.getElementById("start-btn");
+const resetBtn = document.getElementById("reset-btn");
+const inputSection = document.getElementById("input-section");
+const timerSection = document.getElementById("timer-section");
+const motivationalText = document.getElementById("motivational-text");
 
-btn.addEventListener('click', () => {
-    const deadlineValue = new Date(deadline.value);
+const dayElem = document.getElementById("day");
+const hourElem = document.getElementById("hour");
+const minElem = document.getElementById("min");
+const secElem = document.getElementById("sec");
+const deadlineInput = document.getElementById("deadline");
 
-    if (isNaN(deadlineValue.getTime())) {
-        alert('Please enter a valid date and time!');
+let countdownInterval;
+
+// Start Countdown Button
+startBtn.addEventListener("click", () => {
+    const deadlineValue = deadlineInput.value;
+
+    if (!deadlineValue) {
+        alert("Please select a deadline!");
         return;
     }
-    if (deadlineValue <= new Date()) {
-        alert('Deadline must be in the future!');
+
+    const deadline = new Date(deadlineValue).getTime();
+    const now = new Date().getTime();
+
+    if (deadline <= now) {
+        alert("Deadline must be in the future!");
         return;
     }
 
-    clearInterval(timerInterval);
+    inputSection.classList.add("hidden");
+    timerSection.classList.remove("hidden");
 
-    const updateTimer = () => {
-        const currentTime = new Date();
-        const remainingTime = deadlineValue - currentTime;
+    motivationalText.textContent = "Every second counts,Make this hackathon legendary!";
+    startCountdown(deadline);
+});
 
-        if (remainingTime <= 0) {
-            clearInterval(timerInterval);
-            const jsConfetti = new JSConfetti();
+// Countdown Timer Logic
+function startCountdown(deadline) {
+    countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const timeRemaining = deadline - now;
+
+        if (timeRemaining <= 0) {
+            clearInterval(countdownInterval);
+            motivationalText.textContent = "Congratulations! Time's up. 🎉";
+
+            // Trigger Confetti Explosion
             jsConfetti.addConfetti();
-            day.textContent = hour.textContent = min.textContent = sec.textContent = '00';
-            alert('Countdown finished!');
+
             return;
         }
 
-        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        day.textContent = String(days).padStart(2, '0');
-        hour.textContent = String(hours).padStart(2, '0');
-        min.textContent = String(minutes).padStart(2, '0');
-        sec.textContent = String(seconds).padStart(2, '0');
-    };
+        dayElem.textContent = days.toString().padStart(2, "0");
+        hourElem.textContent = hours.toString().padStart(2, "0");
+        minElem.textContent = minutes.toString().padStart(2, "0");
+        secElem.textContent = seconds.toString().padStart(2, "0");
+    }, 1000);
+}
 
-    updateTimer();
-    timerInterval = setInterval(updateTimer, 1000);
+// Reset Button Logic
+resetBtn.addEventListener("click", () => {
+    clearInterval(countdownInterval);
+    inputSection.classList.remove("hidden");
+    timerSection.classList.add("hidden");
+
+    dayElem.textContent = "00";
+    hourElem.textContent = "00";
+    minElem.textContent = "00";
+    secElem.textContent = "00";
+    deadlineInput.value = "";
+
+    motivationalText.textContent = "";
 });
