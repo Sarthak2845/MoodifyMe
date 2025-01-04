@@ -205,6 +205,23 @@
     gap:4em;
 
  }
+ .back-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 8vw;
+    padding: 1rem;
+   border-radius: 12px;
+   background: rgb(20, 20, 20);
+ }
+ .back-btn img{
+    object-fit: contain;
+    width: 6vw;
+    height: 3vh;
+    filter: invert(1);
+
+ }
  .btn button{
     display: flex;
     justify-items: center;
