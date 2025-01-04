@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="Jokes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Document</title>
 </head>
-<body>
+<body id="vanta-bg" class="text-white font-[Sour Gummy]">
     <header>
         <nav id="navbar"
             class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
@@ -37,6 +43,14 @@
             <a href="/Music/GetPlaylist.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
         </div>
     </header>
+    <main >
+        <p class="sub-title">Programming got you stuck? <br> Hit the button below for a random programming joke!</p>
+        <div class="joke-container">
+            <p class="emoji">😂</p>
+            <p class="joke">Why do programmers prefer dark mode? <br> Because light attracts bugs!</p>
+            <button class="btn">Get Me a Joke!</button>
+        </div>
+    </main>
     <script>
         const navToggle = document.getElementById("nav-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -45,5 +59,6 @@
             mobileMenu.classList.toggle("hidden");
         });
     </script>
+    <script src="Jokes.js"></script>
 </body>
 </html>
