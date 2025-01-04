@@ -3,21 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Audio Playlist</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-    <div class="text-center">
-        <h1 class="text-4xl font-bold mb-8">Get Playlist</h1>
-        <iframe 
-            class="rounded-lg shadow-xl border-4 border-gray-700"
-            src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdgz8ZB7c2CP?utm_source=generator" 
-            width="400" 
-            height="480" 
-            frameborder="0" 
-            allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen space-y-8">
+    <h1 class="text-4xl font-bold mb-6">Audio Playlist</h1>
+
+    <div class="w-full max-w-md space-y-4">
+        <div class="audio-only bg-gray-800 p-4 rounded-lg shadow-md" id="player1">
+            <button 
+                class="w-full text-lg font-semibold text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
+                onclick="playAudio('player1')">
+                🎵 Calm Piano Music
+            </button>
+            <iframe 
+                class="hidden"
+                src="https://www.youtube.com/embed/f02mOEt11OQ?autoplay=0&enablejsapi=1" 
+                title="Calm Piano Music" 
+                frameborder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="audio-only bg-gray-800 p-4 rounded-lg shadow-md" id="player2">
+            <button 
+                class="w-full text-lg font-semibold text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
+                onclick="playAudio('player2')">
+                🎵 Relaxing Guitar Music
+            </button>
+            <iframe 
+                class="hidden"
+                src="https://www.youtube.com/embed/2OEL4P1Rz04?autoplay=0&enablejsapi=1" 
+                title="Relaxing Guitar Music" 
+                frameborder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="audio-only bg-gray-800 p-4 rounded-lg shadow-md" id="player3">
+            <button 
+                class="w-full text-lg font-semibold text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
+                onclick="playAudio('player3')">
+                🎵 Lo-Fi Beats
+            </button>
+            <iframe 
+                class="hidden"
+                src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0&enablejsapi=1" 
+                title="Lo-Fi Beats" 
+                frameborder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
+
+    <script>
+        function playAudio(playerId) {
+            // Pause all players
+            document.querySelectorAll('.audio-only iframe').forEach(player => {
+                player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            });
+            // Play selected player
+            const player = document.querySelector(`#${playerId} iframe`);
+            player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+    </script>
 </body>
 </html>
