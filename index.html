@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-
+    <link rel="stylesheet" href="Home.css">
 
     <link rel="stylesheet" href="/styles/style.css">
 
@@ -28,7 +28,7 @@
     <header>
         <nav id="navbar"
             class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
-            <h3 id="logo" class="text-2xl font-extrabold text-white">MoodifyMe</h3>
+            <h3 id="logo" class="text-4xl font-extrabold text-white">MoodifyMe</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="/Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
@@ -56,43 +56,43 @@
         </div>
     </header>
 
-    <main class="mt-24 px-4">
-        <!-- Input Section -->
-        <div id="input-section" class="input-deadline flex justify-center items-center flex-col">
-            <h2 class="text-3xl font-bold mb-4">Set Your <span class="text-blue-700">Hackathon</span> Deadline</h2>
+    <main class="mt-24 px-4 flex flex-col items-center justify-center  text-center">
+        
+        <div id="input-section" class="input-deadline flex justify-center items-center flex-col bg-[#141414] p-8 rounded-xl w-1/2">
+            <h2 class="text-3xl font-bold mb-4 p-4">Set Your <span class="text-blue-700">Hackathon</span> Deadline</h2>
             <input type="text" id="deadline"
-                class="deadline bg-black/80 p-4 rounded-xl text-yellow-400 text-lg border-2 border-indigo-800 focus:border-blue-500 outline-none transition duration-300"
+                class="deadline bg-[#1d021b] p-4 rounded-xl text-yellow-400 text-lg border-2 border-[#6d166f] focus:border-[#fa328f] outline-none transition duration-300"
                 placeholder="Select your deadline">
             <button id="start-btn"
-                class="btn m-4 bg-[#0e0e0ecc] p-4 rounded-2xl border-2 border-indigo-800 focus:border-blue-500">Start
+                class="btn m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start
                 Countdown</button>
         </div>
 
-        <!-- Timer Section -->
-        <div id="timer-section" class="hidden flex flex-col items-center">
+     
+        <div id="timer-section" class="hidden flex flex-col items-center bg-[#141414] p-8 rounded-xl w-1/2">
             <p id="motivational-text" class="text-3xl font-bold mb-4 text-center text-indigo-300">
 
             </p>
             <div class="timer-container flex justify-center items-center flex-row">
-                <div class="flex justify-center items-center flex-col bg-[#0e0e0e99] p-3 rounded-xl m-4">
+                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
                     <div id="day" class="text-3xl">00</div>
                     <span class="text-[snow] h-[30px]">Days</span>
                 </div>
-                <div class="flex justify-center items-center flex-col bg-[#0e0e0e99] p-3 rounded-xl m-4">
+                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
                     <div id="hour" class="text-3xl">00</div>
                     <p>Hr</p>
                 </div>
-                <div class="flex justify-center items-center flex-col bg-[#0e0e0e99] p-3 rounded-xl m-4">
+                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
                     <div id="min" class="text-3xl">00</div>
                     <p>Min</p>
                 </div>
-                <div class="flex justify-center items-center flex-col bg-[#0e0e0e99] p-3 rounded-xl m-4">
+                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
                     <div id="sec" class="text-3xl">00</div>
                     <p>Sec</p>
                 </div>
             </div>
             <button id="reset-btn"
-                class="btn m-4 bg-[#0e0e0e99] text-white p-5 rounded-2xl border-2  border-indigo-800 focus:border-blue-500">Reset</button>
+                class="btn m-4 bg-[#1d0202] text-white p-5 rounded-2xl border-2  border-[#c90f0fd6] focus:border-[#c90f0f]">Reset</button>
         </div>
     </main>
 
