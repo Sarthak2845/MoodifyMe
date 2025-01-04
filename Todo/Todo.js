@@ -1,11 +1,26 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Vanta.js Background
+  VANTA.FOG({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 1000.00,
+      minWidth: 1000.00,
+      highlightColor: 0xc31432,
+      midtoneColor: 0x240b36,
+      lowlightColor: 0x2900ff,
+      baseColor: 0x000000,
+  });
+});
 document.addEventListener("DOMContentLoaded", () => {
   
     const goalContainerWrapper = document.querySelector(".goal-countainer-wrapper");
     const errorLabel = document.querySelector(".error-label");
     const progressLabel = document.querySelector(".progress-label");
     const progressValue = document.querySelector(".progress-value");
-    const addButton = document.querySelector(".add_btn");
-    const deleteButton = document.querySelector(".deletebtn");
+    const addButton = document.querySelector(".add");
+    const deleteButton = document.querySelector(".remove");
   
 
     let allGoals = JSON.parse(localStorage.getItem("allGoals")) || [];

@@ -8,24 +8,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="Todo.js" defer></script>
-    <title>Focus On Today</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>MoodifyMe</title>
 </head>
 
-<body>
-    <main>
-        <h1 class="title">Task<span>&nbsp;Manager</span></h1>
-        <button class="back-btn">
-            <a href="../index.html">
+<body id="vanta-bg" class="flex flex-col bg-black text-white">
 
-                <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="back-btn" >
-            </a>
-        </button>
+    <header>
+        <nav id="navbar"
+            class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
+            <h3 id="logo" class="text-2xl font-extrabold text-white">MoodifyMe</h3>
+            <div class="space-x-8 text-lg hidden sm:flex">
+                <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="./Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
+                <a href="#" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
+                <a href="./Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
+            </div>
+            <!-- Mobile Navigation Toggle -->
+            <div class="sm:hidden flex items-center">
+                <button class="text-white" id="nav-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div class="sm:hidden hidden flex-col bg-black text-white py-4 my-8" id="mobile-menu">
+            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Home</a>
+            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Set Timer</a>
+            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Jokes</a>
+            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
+        </div>
+    </header>
+    <main class="">
+        <h1 class="title">Task<span>&nbsp;Manager</span></h1>
         <div class="app-container">
-            <h2 class="subtitle">
-                <span>Today</span>
-                <img src="https://www.reshot.com/preview-assets/icons/MCGX4A3JFZ/sun-MCGX4A3JFZ.svg" alt="sun" class="sun-icon">
-            </h2>
             <p class="progress-label">Raise the bar by completing your goals!</p>
             <div class="progress-bar">
                 <div class="progress-value">
@@ -36,16 +62,11 @@
             <div class="goal-countainer-wrapper">
             
             </div>
-            <div class="btn">
-                <div class="add_btn">
-                    <button>Add Task</button>
-                </div>
-                <div class="deletebtn">
-                    <button>Delete Task</button>
-                </div>
-            </div>
-            <p class="quote">"Move one step ahead today!"</p>
-            <p class="footer">Made with 💖 by <a href="https://github.com/Sarthak2845" target="_blank">Sarthak Rana</a></p>
+            
+           <div class="button">
+            <button class="add">Add Task</button>
+            <button class="remove">Remove Task</button>
+           </div>
         </div>
     </main>
 </body>

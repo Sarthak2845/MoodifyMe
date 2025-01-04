@@ -5,9 +5,6 @@
   }
  
   body {
-    background:url('https://images.pexels.com/photos/7135037/pexels-photo-7135037.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat ;
-    background-color: hsl(304, 87%, 6%);
-    /*changed */
     background-size: cover;
     background-position: center;
     font-family: "Sour Gummy", sans-serif;
@@ -51,15 +48,6 @@
   }
  
  
-  .sun-icon {
-    vertical-align: middle;
-    margin-left: 16px;
-    width: 50px;
-    height: 50px;
-    animation: rotate 5s linear infinite;
-    border-radius: 50%;
-    background-color: transparent;
-  }
  
   @keyframes rotate {
     from {
@@ -170,69 +158,42 @@
     display: block;
   }
  
-  .quote {
-    margin-top: 5%;
-    font-weight: 500;
-    text-align: center;
-    font-size: 20px;
-    color: #f1f2f0;
-  }
- 
-  .footer {
-    text-align: center;
-    font-weight: 500;
-    margin-top: 64px;
-    font-size: 10px;
-    color: #8b8b8b;
-  }
- 
-  .footer a {
-    color: #8b8b8b;
-    text-decoration: none;
-  }
- 
+
+  
   .completed .goal-input {
     color: #48A300;
     text-decoration: line-through;
     text-decoration-color: #A30048;
     display: block;
   }
- .btn{
-    margin-top: 4%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:4em;
-
- }
- .back-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    width: 8vw;
-    padding: 1rem;
-   border-radius: 12px;
-   background: rgb(20, 20, 20);
- }
- .back-btn img{
-    object-fit: contain;
-    width: 6vw;
-    height: 3vh;
-    filter: invert(1);
-
- }
- .btn button{
-    display: flex;
-    justify-items: center;
-    height: 4em;
-    width: 6em;
-    padding: 1rem;
-    border-radius: 23%;
-    background: rgb(20, 20, 20);
-    color: #EEFFE0;
-    align-items: center;
- }
+.button{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.button .add{
+  padding: 10px 20px;
+  background-color: #48A300;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+.button .remove{
+  padding: 10px 20px;
+ background-color: #A30048;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
   @media (max-width:768px) {
     .title {
       font-size: 32px;
