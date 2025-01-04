@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="/styles/style.css">
 
-    <title>MoodifyMe</title>
+    <title>HackthonCompanion</title>
 </head>
 
 <body id="vanta-bg" class="h-full min-h-screen flex flex-col bg-black text-white font-[Sour Gummy]">
@@ -28,7 +28,7 @@
     <header>
         <nav id="navbar"
             class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
-            <h3 id="logo" class="text-4xl font-extrabold text-white">MoodifyMe</h3>
+            <h3 id="logo" class="text-4xl font-extrabold text-white sm:text-2xl md:text-2xl">HackthonCompanion</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="/Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
@@ -56,22 +56,26 @@
         </div>
     </header>
 
-    <main class="mt-24 px-4 flex flex-col items-center justify-center  text-center">
+    <main class="mt-2 px-4 flex flex-col items-center justify-center text-center">
+        <!-- Introduction Section -->
+        <section class="intro-section mb-10 flex flex-col items-center">
+            <img src="/assets/image.png" alt="programmer" >
+            <h1 class="text-4xl font-bold text-yellow-300 mb-4">Welcome to HackthonCompanion!</h1></h1>
+            <p class="text-xl text-indigo-200 max-w-3xl mx-auto mb-6">Hackathons are exciting, intense, and full of innovation! With the clock ticking, staying on track is crucial. Use this tool to set a deadline and keep track of the time remaining before your big event. Whether you’re preparing for coding sprints or just getting started, we’ve got your back!</p>
+            <p class="text-lg text-gray-400">Click the button below to set your deadline and start the countdown for your hackathon. Let's code, create, and innovate!</p>
+        </section>
         
-        <div id="input-section" class="input-deadline flex justify-center items-center flex-col bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto">
+        <!-- Deadline Input Section -->
+        <div id="input-section" class="input-deadline flex justify-center items-center flex-col bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto ">
             <h2 class="text-3xl font-bold mb-4 p-4">Set Your <span class="text-blue-700">Hackathon</span> Deadline</h2>
-            <input type="text" id="deadline"
-                class="deadline bg-[#1d021b] p-4 rounded-xl text-yellow-400 text-lg border-2 border-[#6d166f] focus:border-[#fa328f] outline-none transition duration-300 w-1/2"
-                placeholder="Select your deadline">
-            <button id="start-btn"
-                class="btn m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start
-                Countdown</button>
+            <input type="text" id="deadline" class="deadline bg-[#1d021b] p-4 rounded-xl text-yellow-400 text-lg border-2 border-[#6d166f] focus:border-[#fa328f] outline-none transition duration-300 w-1/2" placeholder="Select your deadline">
+            <button id="start-btn" class="btn m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start Countdown</button>
         </div>
-
-     
+    
+        <!-- Timer Section -->
         <div id="timer-section" class="hidden flex flex-col items-center bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto">
             <p id="motivational-text" class="text-3xl font-bold mb-4 text-center text-indigo-300">
-
+                The clock is ticking... Keep pushing, keep coding! 🚀
             </p>
             <div class="timer-container flex justify-center items-center flex-wrap">
                 <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
@@ -91,12 +95,9 @@
                     <p>Sec</p>
                 </div>
             </div>
-            <button id="reset-btn"
-                class="btn m-4 bg-[#1d0202] text-white p-5 rounded-2xl border-2  border-[#c90f0fd6] focus:border-[#c90f0f]">Reset</button>
+            <button id="reset-btn" class="btn m-4 bg-[#1d0202] text-white p-5 rounded-2xl border-2  border-[#c90f0fd6] focus:border-[#c90f0f]">Reset</button>
         </div>
     </main>
-
-
 
     <script>
         const navToggle = document.getElementById("nav-toggle");
