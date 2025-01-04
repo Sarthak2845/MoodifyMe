@@ -4,91 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Playlist</title>
+    <link rel="stylesheet" href="music.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white ">
+<body class="bg-gray-900 text-white">
+
     <header>
-        <nav id="navbar"
-            class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav id="navbar" class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
             <h3 id="logo" class="text-2xl font-extrabold text-white">MoodifyMe</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
-                <a href="./Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
-                <a href="#" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
-                <a href="./Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
+                <a href="/Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
+                <a href="/Jokes/Jokes.html" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
+                <a href="/Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
             </div>
             <!-- Mobile Navigation Toggle -->
             <div class="sm:hidden flex items-center">
                 <button class="text-white" id="nav-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </nav>
 
         <div class="sm:hidden hidden flex-col bg-black text-white py-4 my-8" id="mobile-menu">
-            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Home</a>
-            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Set Timer</a>
-            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Jokes</a>
-            <a href="#" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
+            <a href="/index.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Home</a>
+            <a href="/Todo/Todo.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">To Do</a>
+            <a href="/Jokes/Jokes.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Feeling Bored?</a>
+            <a href="/Music/GetPlaylist.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
         </div>
     </header>
-    <div classname="flex flex-col items-center justify-center min-h-screen space-y-8 ">
 
-        <h1 class="text-4xl font-bold mb-6">Audio Playlist</h1>
-        
-        <div class="w-full max-w-md space-y-4">
-        <div class="audio-only bg-gray-800 p-4 rounded-lg shadow-md" id="player1">
-            <button 
-                class="w-full text-lg font-semibold text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
-                onclick="playAudio('player1')">
-                🎵 Calm Piano Music
-            </button>
-            <iframe 
-                class="hidden"
-                src="https://www.youtube.com/embed/f02mOEt11OQ?autoplay=1&enablejsapi=1" 
-                title="Calm Piano Music" 
-                frameborder="0" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-        </div>
+    <main class="flex flex-col items-center justify-center min-h-screen text-center px-4 relative z-10">
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10 brightness-50">
+            <source src="/assets/lofi.mp4" type="video/mp4">
+        </video>
+        <h1 class="text-5xl font-bold text-white-400 mb-6 drop-shadow-lg mt-2 tracking-wide">🎶 Audio Playlist 🎶</h1>
+        <p class="text-lg text-[snow] mb-10 max-w-xl ">Find your mood, play some tunes, and let the music take over. Whether you need to relax, focus, or just chill, we’ve got the perfect playlist for you!</p>
 
-        <div class="audio-only bg-gray-800 p-4 rounded-lg shadow-md" id="player2">
-            <button 
-            class="w-full text-lg font-semibold text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
-                onclick="playAudio('player2')">
-                🎵 Relaxing Guitar Music
-            </button>
-            <iframe 
-                class="hidden"
-                src="https://www.youtube.com/embed/2OEL4P1Rz04?autoplay=1&enablejsapi=1" 
-                title="Relaxing Guitar Music" 
-                frameborder="0" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-        </div>
+        <div class="w-full max-w-md space-y-6">
+            <!-- Playlist 1 -->
+            <div class="audio-only bg-[#0e0e0ecc] p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300" id="player1">
+                <button class="w-full text-2xl font-semibold text-center bg-[#1d021bcc] hover:border-2 hover:border-[#ff3b7c] text-white py-3 rounded-lg transition duration-300 transform hover:scale-105"
+                        onclick="playAudio('player1')">
+                    🎹 Calm Piano Music
+                </button>
+                <iframe class="hidden" src="https://www.youtube.com/embed/f02mOEt11OQ?autoplay=1&enablejsapi=1" title="Calm Piano Music" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
 
-        <div class="audio-only bg-gray-800 p-4 rounded-lg shadow-md" id="player3">
-            <button 
-                class="w-full text-lg font-semibold text-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
-                onclick="playAudio('player3')">
-                🎵 Lo-Fi Beats
-            </button>
-            <iframe 
-            class="hidden"
-            src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&enablejsapi=1" 
-                title="Lo-Fi Beats" 
-                frameborder="0" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
+            <!-- Playlist 2 -->
+            <div class="audio-only bg-[#0e0e0ecc] p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300" id="player2">
+                <button class="w-full text-2xl font-semibold text-center bg-[#1d021bcc] hover:border-2 hover:border-[#ff3b7c] text-white py-3 rounded-lg transition duration-300 transform hover:scale-105"
+                        onclick="playAudio('player2')">
+                    🎸 Relaxing Guitar Music
+                </button>
+                <iframe class="hidden" src="https://www.youtube.com/embed/2OEL4P1Rz04?autoplay=1&enablejsapi=1" title="Relaxing Guitar Music" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <!-- Playlist 3 -->
+            <div class="audio-only bg-[#0e0e0ecc] p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300" id="player3">
+                <button class="w-full text-2xl font-semibold text-center bg-[#1d021bcc] hover:border-2 hover:border-[#ff3b7c] text-white py-3 rounded-lg transition duration-300 transform hover:scale-105"
+                        onclick="playAudio('player3')">
+                    🎯 Lo-Fi Beats
+                </button>
+                <iframe class="hidden" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&enablejsapi=1" title="Lo-Fi Beats" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
+    </main>
 
     <script>
         function playAudio(playerId) {
@@ -101,6 +85,7 @@
             player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
         }
     </script>
-</div>
 </body>
 </html>
+
+
