@@ -58,10 +58,10 @@
 
     <main class="mt-24 px-4 flex flex-col items-center justify-center  text-center">
         
-        <div id="input-section" class="input-deadline flex justify-center items-center flex-col bg-[#141414] p-8 rounded-xl w-1/2">
+        <div id="input-section" class="input-deadline flex justify-center items-center flex-col bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto">
             <h2 class="text-3xl font-bold mb-4 p-4">Set Your <span class="text-blue-700">Hackathon</span> Deadline</h2>
             <input type="text" id="deadline"
-                class="deadline bg-[#1d021b] p-4 rounded-xl text-yellow-400 text-lg border-2 border-[#6d166f] focus:border-[#fa328f] outline-none transition duration-300"
+                class="deadline bg-[#1d021b] p-4 rounded-xl text-yellow-400 text-lg border-2 border-[#6d166f] focus:border-[#fa328f] outline-none transition duration-300 w-1/2"
                 placeholder="Select your deadline">
             <button id="start-btn"
                 class="btn m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start
@@ -69,11 +69,11 @@
         </div>
 
      
-        <div id="timer-section" class="hidden flex flex-col items-center bg-[#141414] p-8 rounded-xl w-1/2">
+        <div id="timer-section" class="hidden flex flex-col items-center bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto">
             <p id="motivational-text" class="text-3xl font-bold mb-4 text-center text-indigo-300">
 
             </p>
-            <div class="timer-container flex justify-center items-center flex-row">
+            <div class="timer-container flex justify-center items-center flex-wrap">
                 <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
                     <div id="day" class="text-3xl">00</div>
                     <span class="text-[snow] h-[30px]">Days</span>

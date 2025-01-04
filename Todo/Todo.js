@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
       touchControls: true,
       gyroControls: false,
       minHeight: 1000.00,
-      minWidth: 1000.00,
+      minWidth: 100.00,
       highlightColor: 0xc31432,
       midtoneColor: 0x240b36,
       lowlightColor: 0x2900ff,
