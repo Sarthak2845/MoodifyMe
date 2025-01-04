@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       attachEventListeners();
     }
   
-    // Function to add a new goal
+   
     function addGoal() {
       allGoals.push({ name: "", completed: false });
       localStorage.setItem("allGoals", JSON.stringify(allGoals)); 
