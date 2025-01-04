@@ -946,6 +946,14 @@ video {
   text-align: center;
 }
 
+.font-\[\] {
+  font-family: ;
+}
+
+.font-\[S\] {
+  font-family: S;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;

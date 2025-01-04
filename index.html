@@ -9,9 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 
 
     <link rel="stylesheet" href="/styles/style.css">
@@ -19,7 +22,7 @@
     <title>MoodifyMe</title>
 </head>
 
-<body id="vanta-bg" class="h-full min-h-screen flex flex-col bg-black text-white">
+<body id="vanta-bg" class="h-full min-h-screen flex flex-col bg-black text-white font-[Sour Gummy]">
 
     <header>
         <nav id="navbar"
@@ -29,7 +32,8 @@
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="./Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
                 <a href="#" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
-                <a href="./Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
+                <a href="./Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get
+                    Playlist</a>
             </div>
             <!-- Mobile Navigation Toggle -->
             <div class="sm:hidden flex items-center">
@@ -55,18 +59,18 @@
         <!-- Input Section -->
         <div id="input-section" class="input-deadline flex justify-center items-center flex-col">
             <h2 class="text-3xl font-bold mb-4">Set Your <span class="text-blue-700">Hackathon</span> Deadline</h2>
-            <input
-                type="text"
-                id="deadline"
+            <input type="text" id="deadline"
                 class="deadline bg-black/80 p-4 rounded-xl text-yellow-400 text-lg border-2 border-indigo-800 focus:border-blue-500 outline-none transition duration-300"
                 placeholder="Select your deadline">
-            <button id="start-btn" class="btn m-4 bg-[#0e0e0ecc] p-4 rounded-2xl border-2 border-indigo-800 focus:border-blue-500">Start Countdown</button>
+            <button id="start-btn"
+                class="btn m-4 bg-[#0e0e0ecc] p-4 rounded-2xl border-2 border-indigo-800 focus:border-blue-500">Start
+                Countdown</button>
         </div>
-    
+
         <!-- Timer Section -->
         <div id="timer-section" class="hidden flex flex-col items-center">
             <p id="motivational-text" class="text-3xl font-bold mb-4 text-center text-indigo-300">
-                
+
             </p>
             <div class="timer-container flex justify-center items-center flex-row">
                 <div class="flex justify-center items-center flex-col bg-[#0e0e0e99] p-3 rounded-xl m-4">
@@ -86,7 +90,8 @@
                     <p>Sec</p>
                 </div>
             </div>
-            <button id="reset-btn" class="btn m-4 bg-[#0e0e0e99] text-white p-5 rounded-2xl border-2  border-indigo-800 focus:border-blue-500">Reset</button>
+            <button id="reset-btn"
+                class="btn m-4 bg-[#0e0e0e99] text-white p-5 rounded-2xl border-2  border-indigo-800 focus:border-blue-500">Reset</button>
         </div>
     </main>
 
@@ -105,4 +110,3 @@
 </body>
 
 </html>
-
