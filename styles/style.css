@@ -623,6 +623,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .block {
   display: block;
 }
@@ -661,6 +665,14 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-6 {
@@ -706,6 +718,10 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .flex-row {
