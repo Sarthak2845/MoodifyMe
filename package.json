@@ -2,15 +2,18 @@
   "name": "moodifyme",
   "version": "1.0.0",
   "main": "script.js",
- "scripts": {
-  "build": "cross-env NODE_ENV=production tailwindcss -i ./input.css -o ./styles/style.css",
-  "watch": "tailwindcss -i ./input.css -o ./styles/style.css --watch"
-},
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tailwindcss -i ./input.css -o ./styles/style.css",
+    "watch": "tailwindcss -i ./input.css -o ./styles/style.css --watch"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "daisyui": "^4.12.23"
   }
 }
