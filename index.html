@@ -33,8 +33,7 @@
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="/Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
                 <a href="/Jokes/Jokes.html" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
-                <a href="/Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get
-                    Playlist</a>
+                <a href="/Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Lofi Tunes</a>
             </div>
             <!-- Mobile Navigation Toggle -->
             <div class="sm:hidden flex items-center">
@@ -52,51 +51,20 @@
             <a href="/index.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Home</a>
             <a href="/Todo/Todo.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">To Do</a>
             <a href="/Jokes/Jokes.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Feeling Bored?</a>
-            <a href="/Music/GetPlaylist.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
+            <a href="/Music/GetPlaylist.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Lofi Tunes</a>
         </div>
     </header>
 
-    <main class="mt-2 px-4 flex flex-col items-center justify-center text-center">
+    <main class="mt-2 px-4 flex flex-col items-center justify-center text-center h-full">
         <!-- Introduction Section -->
         <section class="intro-section mb-10 flex flex-col items-center">
-            <img src="/assets/image.png" alt="programmer" >
-            <h1 class="text-4xl font-bold text-yellow-300 mb-4">Welcome to HackthonCompanion!</h1></h1>
-            <p class="text-xl text-indigo-200 max-w-3xl mx-auto mb-6">Hackathons are exciting, intense, and full of innovation! With the clock ticking, staying on track is crucial. Use this tool to set a deadline and keep track of the time remaining before your big event. Whether you’re preparing for coding sprints or just getting started, we’ve got your back!</p>
-            <p class="text-lg text-gray-400">Click the button below to set your deadline and start the countdown for your hackathon. Let's code, create, and innovate!</p>
+            <img src="/assets/image.png" alt="programmer"  class="mb-2">
+            <h1 class="text-4xl font-bold text-yellow-300 mb-3">Welcome to HackthonCompanion!</h1></h1>
+            <p class="text-xl text-indigo-200 max-w-3xl mx-auto mb-4">Hackathons are exciting, intense, and full of innovation! With the clock ticking, staying on track is crucial. Use this tool to set a deadline and keep track of the time remaining before your big event. Whether you’re preparing for coding sprints or just getting started, we’ve got your back!</p>
+            <p class="text-lg text-gray-400 mt-0">Click the button below to set your deadline and start the countdown for your hackathon. Let's code, create, and innovate!</p>
+           <a href="/CountDown/CountDown.html"> <button class=" m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start Here</button></a>
         </section>
         
-        <!-- Deadline Input Section -->
-        <div id="input-section" class="input-deadline flex justify-center items-center flex-col bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto ">
-            <h2 class="text-3xl font-bold mb-4 p-4">Set Your <span class="text-blue-700">Hackathon</span> Deadline</h2>
-            <input type="text" id="deadline" class="deadline bg-[#1d021b] p-4 rounded-xl text-yellow-400 text-lg border-2 border-[#6d166f] focus:border-[#fa328f] outline-none transition duration-300 w-1/2" placeholder="Select your deadline">
-            <button id="start-btn" class="btn m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start Countdown</button>
-        </div>
-    
-        <!-- Timer Section -->
-        <div id="timer-section" class="hidden flex flex-col items-center bg-[#141414] p-8 rounded-xl w-fit max-w-auto mx-auto">
-            <p id="motivational-text" class="text-3xl font-bold mb-4 text-center text-indigo-300">
-                The clock is ticking... Keep pushing, keep coding! 🚀
-            </p>
-            <div class="timer-container flex justify-center items-center flex-wrap">
-                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
-                    <div id="day" class="text-3xl">00</div>
-                    <span class="text-[snow] h-[30px]">Days</span>
-                </div>
-                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
-                    <div id="hour" class="text-3xl">00</div>
-                    <p>Hr</p>
-                </div>
-                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
-                    <div id="min" class="text-3xl">00</div>
-                    <p>Min</p>
-                </div>
-                <div class="flex justify-center items-center flex-col bg-[#05021d] border-2 border-[#3b30ff] p-3 rounded-xl m-4">
-                    <div id="sec" class="text-3xl">00</div>
-                    <p>Sec</p>
-                </div>
-            </div>
-            <button id="reset-btn" class="btn m-4 bg-[#1d0202] text-white p-5 rounded-2xl border-2  border-[#c90f0fd6] focus:border-[#c90f0f]">Reset</button>
-        </div>
     </main>
 
     <script>
