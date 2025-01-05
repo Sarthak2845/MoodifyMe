@@ -1678,6 +1678,18 @@ html {
   min-height: 100vh;
 }
 
+.min-h-\[350vh\] {
+  min-height: 350vh;
+}
+
+.min-h-\[380vh\] {
+  min-height: 380vh;
+}
+
+.min-h-\[300vh\] {
+  min-height: 300vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -2158,6 +2170,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:min-h-\[400vh\] {
+    min-height: 400vh;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
