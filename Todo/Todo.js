@@ -154,4 +154,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderGoals();
     updateProgress();
   });
-  
+
+

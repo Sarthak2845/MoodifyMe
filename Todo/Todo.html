@@ -13,19 +13,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="Todo.js" defer></script>
     <link rel="stylesheet" href="../styles/style.css">
-    <title>MoodifyMe</title>
+    <title>HackthonCompanion</title>
 
     <style>
-        /* Ensure the html and body take up full height */
+
         html, body {
             height: 100%;
             margin: 0;
         }
 
-        /* Flex layout for body, so content stretches and footer sticks to bottom */
+
         body {
             display: flex;
             flex-direction: column;
+            font-family: "Sour Gummy", sans-serif;
         }
 
         main {
@@ -33,20 +34,20 @@
         }
 
         footer {
-            margin-top: auto; /* Pushes the footer to the bottom */
+            margin-top: auto; 
         }
     </style>
 </head>
 
-<body class="flex flex-col bg-black text-white min-h-screen">
+<body class="h-fit min-h-screen flex flex-col bg-[#051b11] text-white ">
 
     <header>
-        <nav id="navbar" class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
-            <h3 id="logo" class="text-4xl font-extrabold text-white">MoodifyMe</h3>
+        <nav id="navbar" class="flex justify-between items-center bg-[#000000b3] border-b-2 border-b-green-500 p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
+            <h3 id="logo" class="text-4xl font-extrabold text-white">HackthonCompanion</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="/CountDown/CountDown.html" class="hover:text-yellow-400 transition duration-300">CountDown</a>
-                <a href="/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
+                <a href="/Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
                 <a href="/Jokes/Jokes.html" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
                 <a href="/Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get Playlist</a>
             </div>
@@ -69,7 +70,7 @@
         </div>
     </header>
 
-    <main class="flex-grow w-fit max-w-auto mx-auto">
+    <main class="px-4 flex flex-col items-center justify-center text-center mt-2">
         <h1 class="title">Task<span>&nbsp;Manager</span></h1>
         <div class="app-container w-fit max-w-auto mx-auto">
             <p class="progress-label">Raise the bar by completing your goals!</p>

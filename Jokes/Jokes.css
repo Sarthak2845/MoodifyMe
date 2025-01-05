@@ -4,11 +4,31 @@
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-    font-family: Atma;
-    margin: 0;
-}
+ body {
+            
+            color: #ffffff;
+            background: linear-gradient(-45deg, #ff7eb3, #ff758f, #8572ff, #3bf4fb, #72ffda);
+            background-size: 300% 300%;
+            animation: witchingHour 12s ease infinite;
+        }
+
+        @keyframes witchingHour {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 50% 100%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            75% {
+                background-position: 50% 0%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
 
 h1 {
@@ -37,7 +57,7 @@ main {
     text-align: center;
     margin-top: 2rem;
     font-weight: 600;
-    color: beige;
+    color: black;
 }
 
 .joke-container {
