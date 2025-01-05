@@ -1777,6 +1777,14 @@ html {
   border-width: 2px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-\[\#0fc976\] {
   --tw-border-opacity: 1;
   border-color: rgb(15 201 118 / var(--tw-border-opacity, 1));
@@ -1798,6 +1806,20 @@ html {
 
 .border-\[\#ff18f0cc\] {
   border-color: #ff18f0cc;
+}
+
+.border-\[\] {
+  border-color: ;
+}
+
+.border-\[\#5e5730\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(94 87 48 / var(--tw-border-opacity, 1));
+}
+
+.border-b-green-500 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#000000b3\] {
@@ -1855,6 +1877,25 @@ html {
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#041b11\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 27 17 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#051b11\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 27 17 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#19170c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 23 12 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -2010,6 +2051,10 @@ html {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .shadow-lg {
