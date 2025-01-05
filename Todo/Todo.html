@@ -10,19 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="Todo.js" defer></script>
     <link rel="stylesheet" href="../styles/style.css">
     <title>MoodifyMe</title>
+
+    <style>
+        /* Ensure the html and body take up full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Flex layout for body, so content stretches and footer sticks to bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        footer {
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+    </style>
 </head>
 
-<body id="vanta-bg" class="flex flex-col bg-black text-white">
+<body class="flex flex-col bg-black text-white min-h-screen">
 
     <header>
-        <nav id="navbar"
-            class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav id="navbar" class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
             <h3 id="logo" class="text-4xl font-extrabold text-white">MoodifyMe</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
@@ -33,10 +52,8 @@
             <!-- Mobile Navigation Toggle -->
             <div class="sm:hidden flex items-center">
                 <button class="text-white" id="nav-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -49,26 +66,43 @@
             <a href="/Music/GetPlaylist.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
         </div>
     </header>
-    <main class="w-fit max-w-auto mx-auto">
+
+    <main class="flex-grow w-fit max-w-auto mx-auto">
         <h1 class="title">Task<span>&nbsp;Manager</span></h1>
         <div class="app-container w-fit max-w-auto mx-auto">
             <p class="progress-label">Raise the bar by completing your goals!</p>
-            <div class="progress-bar ">
+            <div class="progress-bar">
                 <div class="progress-value">
                     <span>0/0 Completed</span>
                 </div>
             </div>
             <p class="error-label" style="display: none;">Please set all goals!</p>
             <div class="goal-countainer-wrapper">
-            
             </div>
-            
-           <div class="button">
-            <button class="add">Add Task</button>
-            <button class="remove">Remove Task</button>
-           </div>
+
+            <div class="button">
+                <button class="add">Add Task</button>
+                <button class="remove">Remove Task</button>
+            </div>
         </div>
     </main>
+
+    <footer class="bg-[#0f1d1e] text-white py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 HackthonCompanion. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="https://github.com/" class="text-white hover:text-yellow-300 transition duration-300" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/" class="text-white hover:text-yellow-300 transition duration-300" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/" class="text-white hover:text-yellow-300 transition duration-300" target="_blank">Twitter</a>
+            </div>
+            <div class="mt-4 text-sm text-gray-400">
+                <p>Designed and Developed with ❤️ by Sarthak and Aivnash</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
+
+

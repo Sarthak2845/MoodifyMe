@@ -64,9 +64,54 @@
             <p class="text-lg text-gray-400 mt-0">Click the button below to set your deadline and start the countdown for your hackathon. Let's code, create, and innovate!</p>
            <a href="/CountDown/CountDown.html"> <button class=" m-4 bg-[#071a13] p-4 rounded-2xl border-2 border-[#0fc976] focus:border-[#0fc93e]">Start Here</button></a>
         </section>
+        <!-- Features Section -->
+        <section class="features-section mt-10 px-4 h-screen p-6">
+            <h2 class="text-3xl font-bold text-center text-yellow-300 mb-8 mt-4">Explore Our Features</h2>
+            <div class="features-container flex flex-col md:flex-row justify-center items-center gap-6">
+                <!-- Card 1 -->
+                <div class="feature-card bg-[#021d11] p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center w-64 h-80">
+                    <img src="/assets/to-do-list.png" alt="To-Do Manager Icon" class="w-1/2 h-1/2 mb-4">
+                    <h3 class="text-xl font-bold text-[#0fdb80] mb-2">To-Do Manager</h3>
+                    <p class="text-gray-300 text-sm">Plan, prioritize, and conquer tasks. Stay organized during your hackathons and beyond.</p>
+                </div>
         
+                <!-- Card 2 -->
+                <div class="feature-card bg-[#021d11] p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center w-64 h-80">
+                    <img src="/assets/boring.png" alt="Feeling Bored Icon" class="w-16 h-16 mb-4">
+                    <h3 class="text-xl font-bold text-[#0fdb80] mb-2">Feeling Bored?</h3>
+                    <p class="text-gray-300 text-sm">Lighten the mood with handpicked programming jokes and memes to keep you entertained.</p>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="feature-card bg-[#021d11] p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center w-64 h-80">
+                    <img src="/assets/headphones.png" alt="Lofi Tunes Icon" class="w-16 h-16 mb-4">
+                    <h3 class="text-xl font-bold text-[#0fdb80] mb-2">Lofi Tunes</h3>
+                    <p class="text-gray-300 text-sm">Dive into relaxing lofi beats and stay in the zone for focused coding and innovation.</p>
+                </div>
+        
+                <!-- Card 4 -->
+                <div class="feature-card bg-[#021d11] p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center w-64 h-80">
+                    <img src="/assets/burning.png" alt="Countdown Timer Icon" class="w-16 h-16 mb-4">
+                    <h3 class="text-xl font-bold text-[#0fdb80] mb-2">Countdown Timer</h3>
+                    <p class="text-gray-300 text-sm">Keep track of your hackathon deadlines with a dynamic and engaging countdown timer.</p>
+                </div>
+            </div>
+        </section>
     </main>
-
+    <footer class="bg-[#0f1d1e] text-white py-6 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 HackthonCompanion. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="https://github.com/" class="text-white hover:text-yellow-300 transition duration-300" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/" class="text-white hover:text-yellow-300 transition duration-300" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/" class="text-white hover:text-yellow-300 transition duration-300" target="_blank">Twitter</a>
+            </div>
+            <div class="mt-4 text-sm text-gray-400">
+                <p>Designed and Developed with ❤️ by Sarthak and Aivnash</p>
+            </div>
+        </div>
+    </footer>
+    
     <script>
         const navToggle = document.getElementById("nav-toggle");
         const mobileMenu = document.getElementById("mobile-menu");

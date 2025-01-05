@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Vanta.js Background
-    VANTA.FOG({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 1000.00,
-        minWidth: 100.00,
-        highlightColor: 0xc31432,
-        midtoneColor: 0x240b36,
-        lowlightColor: 0x2900ff,
-        baseColor: 0x000000,
-    });
-  });
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Initialize Vanta.js Background
+//     VANTA.FOG({
+//         el: "#vanta-bg",
+//         mouseControls: true,
+//         touchControls: true,
+//         gyroControls: false,
+//         minHeight: 1000.00,
+//         minWidth: 100.00,
+//         highlightColor: 0xc31432,
+//         midtoneColor: 0x240b36,
+//         lowlightColor: 0x2900ff,
+//         baseColor: 0x000000,
+//     });
+//   });
 
   const joke = document.querySelector('.joke');
 const btn = document.querySelector('.btn');

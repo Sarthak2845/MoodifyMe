@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Document</title>
+    <title>HackthonCompanion</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+    </style>
 </head>
-<body id="vanta-bg" class="text-white font-[Sour Gummy]">
+
+<body id="vanta-bg" class="flex flex-col bg-black text-white min-h-screen">
     <header>
         <nav id="navbar"
             class="flex justify-between items-center bg-[#000000b3] p-6 shadow-lg sticky top-0 left-0 w-full z-50 transition-all duration-300">
-            <h3 id="logo" class="text-4xl font-extrabold text-white">MoodifyMe</h3>
+            <h3 id="logo" class="text-4xl font-extrabold text-white">HackthonCompanion</h3>
             <div class="space-x-8 text-lg hidden sm:flex">
                 <a href="/index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="/Todo/Todo.html" class="hover:text-yellow-400 transition duration-300">To Do</a>
                 <a href="/Jokes/Jokes.html" class="hover:text-yellow-400 transition duration-300">Feeling Bored?</a>
-                <a href="/Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Get
-                    Playlist</a>
+                <a href="/Music/GetPlaylist.html" class="hover:text-yellow-400 transition duration-300">Lofi Tunes</a>
             </div>
-            <!-- Mobile Navigation Toggle -->
+ 
             <div class="sm:hidden flex items-center">
                 <button class="text-white" id="nav-toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -43,7 +65,7 @@
             <a href="/Music/GetPlaylist.html" class="block px-4 py-2 hover:text-yellow-400 mt-5">Get Playlist</a>
         </div>
     </header>
-    <main >
+    <main class="flex-grow w-fit max-w-auto mx-auto">
         <p class="sub-title">Programming got you stuck? <br> Hit the button below for a random programming joke!</p>
         <div class="joke-container">
             <p class="emoji">😂</p>
@@ -51,6 +73,23 @@
             <button class="btn">Get Me a Joke!</button>
         </div>
     </main>
+
+    <footer class="bg-[#0f1d1e] text-white py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 HackthonCompanion. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="https://github.com/" class="text-white hover:text-yellow-300 transition duration-300"
+                    target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/" class="text-white hover:text-yellow-300 transition duration-300"
+                    target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/" class="text-white hover:text-yellow-300 transition duration-300"
+                    target="_blank">Twitter</a>
+            </div>
+            <div class="mt-4 text-sm text-gray-400">
+                <p>Designed and Developed with ❤️ by Sarthak and Aivnash</p>
+            </div>
+        </div>
+    </footer>
     <script>
         const navToggle = document.getElementById("nav-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -61,4 +100,5 @@
     </script>
     <script src="Jokes.js"></script>
 </body>
+
 </html>
