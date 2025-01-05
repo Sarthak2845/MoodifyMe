@@ -1907,6 +1907,10 @@ html {
   background-color: rgb(25 23 12 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#000000fa\] {
+  background-color: #000000fa;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
