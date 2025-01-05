@@ -1785,6 +1785,10 @@ html {
   border-bottom-width: 2px;
 }
 
+.border-t-2 {
+  border-top-width: 2px;
+}
+
 .border-\[\#0fc976\] {
   --tw-border-opacity: 1;
   border-color: rgb(15 201 118 / var(--tw-border-opacity, 1));
@@ -1820,6 +1824,11 @@ html {
 .border-b-green-500 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
+}
+
+.border-t-green-500 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#000000b3\] {
